@@ -15,16 +15,22 @@
         <button>Submit!</button>
     </form>
     <input id="backInput" readonly value="Loading...">
+    <p>If you can't run this, you might consider using Firefox.</p>
     <p><a href="https://github.com/agoudbg/is-Prime">GitHub</a></p>
 </body>
 
-<script src="index.js"></script>
+<script src="isPrime.js"></script>
 <script>
     window.onload = function () {
         backInput.value = "Ready";
     }
     function getResult() {
-        backInput.value = String(isPrime(numInput.value));
+        try {
+            backInput.value = String(isPrime(numInput.value));
+        }
+        catch (err) {
+            backInput.value = "Something error.";
+        }
     }
 </script>
 
