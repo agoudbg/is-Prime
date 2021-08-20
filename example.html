@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>isPrime</title>
+</head>
+
+<body>
+    <h1>Try isPrime Now! </h1>
+    <form action="javascript:getResult()">
+        <input id="numInput" type="number">
+        <button>Submit!</button>
+    </form>
+    <input id="backInput" readonly value="Loading...">
+    <p><a href="https://github.com/agoudbg/is-Prime">GitHub</a></p>
+</body>
+
+<script src="index.js"></script>
+<script>
+    window.onload = function () {
+        backInput.value = "Ready";
+    }
+    function getResult() {
+        backInput.value = String(isPrime(numInput.value));
+    }
+</script>
+
+</html>
